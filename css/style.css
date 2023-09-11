@@ -284,14 +284,19 @@ input[type="search"] {
     color: white;
 }
 .learn-more-details {
+    margin-top: 1vmin;
     display: none;
-   
     margin-right: -8vmin;
     text-align: center;
-    word-wrap: break-word;  /* This will break the word to the next line if it's too long for its container. */
-    white-space: normal;    /* Text can wrap to next line. */
-    overflow-x: hidden;     /* Hide horizontal overflow. */
-    width: 100%;  
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-x: hidden;
+    width: 91%;
+    margin: auto;
+    padding: 4vmin 0vmin;
+    border: 1px solid white;
+    margin-top: 1vmin;
+    
 }
 .learn-more-details p {
     margin: 0;  /* Remove default margin for cleaner look, optional. */

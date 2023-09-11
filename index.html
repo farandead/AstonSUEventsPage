@@ -699,16 +699,22 @@
         });
         document.addEventListener("DOMContentLoaded", function () {
             var buttons = document.querySelectorAll(".details-button button");
-
+        
             buttons.forEach(function (button) {
                 button.addEventListener("click", function () {
                     var detailsDiv = this.closest('.details-button').nextElementSibling;
-
+        
                     if (detailsDiv && detailsDiv.classList.contains('learn-more-details')) {
                         if (detailsDiv.style.display === "none" || !detailsDiv.style.display) {
                             detailsDiv.style.display = "flex";
+        
+                            // Set button color to pink
+                            this.style.backgroundColor = "#960444";
                         } else {
                             detailsDiv.style.display = "none";
+        
+                            // Reset button color to its original (or you can specify another color)
+                            this.style.backgroundColor = ""; // This will remove any inline background color, allowing the button to revert to its stylesheet-defined color.
                         }
                     }
                 });
