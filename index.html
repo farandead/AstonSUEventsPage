@@ -7,19 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 
     <title>Aston SU - Events Page</title>
 </head>
 
 <body>
-
+    <script>
+        AOS.init();
+      </script>
     <div class="navbar_default">
         <div id="progress-bar"></div>
-        <div class="navbar_default_sub">
+        <div class="navbar_default_sub" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
             <img src="img/logo_su.png" alt="">
         </div>
         <button id="hamburger" aria-label="Open Menu">
@@ -47,11 +53,11 @@
 
     </div>
 
-    <div class="container">
+    <div  class="container">
         <div class="video-container">
             <video src="compressedDAY.mp4" autoplay muted loop playsinline></video>
-            <p class="overlay-text">ASTON SU EVENTS</p>
-            <button class="overlay-button" onclick="scrollToTarget('target_scroll')">DISCOVER EVENT</button>
+            <p  class="overlay-text">ASTON SU EVENTS</p>
+            <button  class="overlay-button" onclick="scrollToTarget('target_scroll')">DISCOVER EVENT</button>
         </div>
 
         <div class="banner-aston-events">
@@ -79,7 +85,9 @@
             </div>
         </div>
 
-        <div class="events-information-container" id="target_scroll">
+        <div class="events-information-container" id="target_scroll" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             <div class="information-container">
                 
 
@@ -426,7 +434,9 @@
 
 
     </div>
-    <div class="image-container-banner">
+    <div class="image-container-banner"  data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="4500">
         <div class="images">
             <div class="image-box">
                 <img src="img\52645988752_e593b051bd_c.jpg" alt="">
@@ -466,8 +476,8 @@
             </div>
 
         </div>
-        <div class="text-overlay">
-            <div class="text-item">
+        <div class="text-overlay" >
+            <div class="text-item" >
                 <p class="text-item-paragraph">DAY EVENTS</p>
                 <p class="sub-paragraph-banner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
                     repellat.</p>
@@ -506,7 +516,7 @@
             <div class="footer-sub-menu-2">
                 <p class="footer-sub-menu-heading footer-paragraph">SOCIALS</p>
                 <ul>
-                    <li>a+44 (0)121 204 4855</li>
+                    <li>44 (0)121 204 4855</li>
                     <li>union.reception@aston.ac.uk</li>
                     <li>Maps & Directions</li>
                 </ul>

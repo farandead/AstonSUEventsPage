@@ -23,8 +23,8 @@ body {
     top: 0; /* This ensures the navbar sticks to the top */
     z-index: 1000; /* This ensures the navbar appears above other content */
     background-color: white; /* Or any other color you'd prefer */
-    padding-bottom: 3vmin;
-    padding-top: 3vmin;
+    padding-bottom: 1vmin;
+    padding-top: 1vmin;
 }
 .navbar_default_sub {
     height: 50%;
@@ -52,7 +52,7 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
-    padding: 1vmin 1vmin;
+    padding: 0vmin 1vmin;
     list-style: none;
     top: 12vmin
 }
@@ -64,6 +64,7 @@ body {
 .navbar_menu ul li {
     padding: 1vmin 1vmin;
     font-size: 2.4vmin;
+    FONT-WEIGHT: BOLD;
 }
 #basket-icon-nav{
     position: relative; /* Makes sure the child elements are positioned relative to this */
@@ -432,6 +433,7 @@ input[type="search"] {
 }
 .footer-sub-menu img{
     width: 14vmax;
+    BORDER-RADIUS: 1VMIN;
 }
 .footer-sub-menu{
     text-align: left;
@@ -516,7 +518,7 @@ input[type="search"] {
         display: none; /* Initially hide the menu on smaller screens */
         flex-direction: column;
         position: absolute;
-         top: 21vmin; /* Adjust depending on your navbar's height */
+         top: 16vmin; /* Adjust depending on your navbar's height */
         background-color: white;
         border: 1px solid #ccc;
         width: 100%;
