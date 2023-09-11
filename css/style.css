@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/* font-family: 'Josefin Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/* font-family: 'Bebas Neue', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@100&family=Passion+One:wght@400;700;900&display=swap");
+/* font-family: 'Passion One', cursive; */
+*{
+    transition: all 1s ease-in-out;
+}
+body {
+  
+    padding: 0%;
+    margin: 0%;
+    font-family: "Josefin Sans", sans-serif;
+}
+.navbar_default {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    position: sticky;
+    top: 0; /* This ensures the navbar sticks to the top */
+    z-index: 1000; /* This ensures the navbar appears above other content */
+    background-color: white; /* Or any other color you'd prefer */
+    padding-bottom: 3vmin;
+    padding-top: 3vmin;
+}
+.navbar_default_sub {
+    height: 50%;
+}
+.navbar_default_sub img {
+    width: 25vmin;
+}
+
+#hamburger {
+    display: none;
+    padding: 1.5vmin ;
+
+    background-color: #d92179;
+    border: none;
+    border-radius: 2vmin;
+}
+#hamburger svg {
+   
+    filter: invert(100%);
+}
+
+.navbar_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 1vmin 1vmin;
+    list-style: none;
+    top: 12vmin
+}
+.navbar_menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.navbar_menu ul li {
+    padding: 1vmin 1vmin;
+    font-size: 2.4vmin;
+}
+#basket-icon-nav{
+    position: relative; /* Makes sure the child elements are positioned relative to this */
+    display: inline-block; /* Makes sure the li doesn't take up the full width */
+    padding-left: 3vmin;
+}
+.navbar_default_sub_list button{
+    padding: 1vmin 4vmin;
+    background-color: #d92179;
+    color: white;
+    border: none;
+    border-radius:3vmin ;
+    font-family:'Josefin Sans', sans-serif;
+}
+.basket-counter {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color:#d92179;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: normal;
+    z-index: 1;
+}
+.container {
+    position: relative;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    /* You can set a max-width if needed */
+    overflow: hidden; /* To ensure everything stays inside the container */
+    display: flex; /* To use Flexbox for centering */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+}
+
+video {
+    width: 100%; /* Ensure video takes full width of the container */
+    height: 100%; /* Maintain the video aspect ratio */
+    display: block; /* Remove potential default margins */
+    z-index: 0; /* Keep the video below the overlay text */
+    filter: brightness(60%);
+}
+
+.overlay-text,
+.overlay-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* to ensure the text and button are above the video */
+}
+
+.overlay-text {
+    font-family: "Bebas Neue", sans-serif;
+    top: 30%; /* Place at vertical center */
+
+    font-size: 8vmin; /* adjust size as per your need */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* optional, for better visibility */
+    letter-spacing: 0.1vmin;
+}
+
+.overlay-button {
+    top: calc(55%); /* adjust as per your requirement */
+    padding: 1vmin 2vmin;
+    border: none;
+    border-radius: 2vmin;
+    padding: 3vmin 7vmin;
+    font-weight: 600;
+    background-color: #d92179;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.overlay-button:hover {
+    background-color: #c2185b;
+}
+
+.banner-aston-events {
+    text-align: center;
+    background-color: #d92179;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    overflow: hidden; /* hide the overflowing text */
+}
+.banner-aston-events {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(10%); /* Adjust the percentage to control the amount of overlap */
+}
+
+.banner-aston-events .marquee {
+    display: flex;
+    animation: moveText 50s linear infinite;
+    white-space:nowrap;
+}
+
+.banner-aston-events p {
+    margin-top: -1vmax;
+    font-size: 5vmin;
+    letter-spacing: 0.2vmin;
+    margin: 0; /* reset default paragraph margin */
+    flex-shrink: 0; /* prevent flex items from shrinking */
+    padding-right: 10%; /* distance between two instances of text */
+}
+.events-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    width: 69%;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 23vmin;
+}
+
+.events-search-container {
+    width: 100%;
+}
+
+.events-container input {
+    width: 100%;
+    padding: 3vmin 17vmin;
+    background-color: #d92179;
+    color: white;
+    border: none;
+    border-radius: 3vmin;
+    outline: white;
+    font-size: 3vmin;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+input[type="search"]::placeholder {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2vmin;
+    font-weight: 600;
+}
+/* Center placeholder text */
+input[type="search"] {
+    text-align: center;
+    /* Assuming you want an icon from FontAwesome or similar library */
+    background-image: url("/img/search.svg");
+
+    background-repeat: no-repeat;
+    background-position: left center; /* Adjust as needed */
+    padding-left: 45px;
+    background-size: 78px 20px;
+}
+.events-sub-container {
+    width: 100%;
+    padding-top: 6vmax;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    justify-items: center;
+}
+.events-heading {
+    font-size: 4vmin;
+    font-weight: 600;
+}
+.events-link a {
+    text-transform: uppercase;
+    color: black;
+    text-decoration: NONE;
+    font-weight: 800;
+    font-size: 2vmin;
+}
+
+#progress-bar {
+    position: fixed; /* This will fix the bar to the top of the viewport */
+    top: 0;
+    left: 0;
+    height: 6px;
+    background-color: #d92179;
+    width: 0%;
+    z-index: 1000; /* This will ensure the progress bar is above other content */
+}
+.events-information-container {
+    padding-top: 8vmax;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 8vmax;
+}
+.information-container {
+    WIDTH: 40VMIN;
+    background-color: #d92179;
+    border-radius: 2vmin;
+    overflow: hidden;
+    padding-bottom: 5vmin;
+    margin: 2vmin 2vmin;
+}
+.information-container a {
+    text-decoration: none;
+}
+.image-container img {
+    width: 100%;;
+}
+.learn-more-details {
+    display: none;
+    /* ... other styles ... */
+  
+    color: white;
+}
+.learn-more-details {
+    display: none;
+   
+    margin-right: -8vmin;
+    text-align: center;
+    word-wrap: break-word;  /* This will break the word to the next line if it's too long for its container. */
+    white-space: normal;    /* Text can wrap to next line. */
+    overflow-x: hidden;     /* Hide horizontal overflow. */
+    width: 100%;  
+}
+.learn-more-details p {
+    margin: 0;  /* Remove default margin for cleaner look, optional. */
+}
+
+
+
+.details-container p {
+    padding-left: 1vmin;
+    font-size: 2.5vmin;
+    font-weight: 700;
+    color: white;
+}
+.details-container ul {
+    text-decoration: none;
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    padding-top: 2vmin;
+}
+.details-container ul li {
+    list-style-type: none;
+    font-size: 1.5vmin;
+    padding: 1vmin 1vmin;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.details-container ul li svg {
+    width: 2vmin;
+    filter: invert(100%);
+    padding-right: 1vmin;
+}
+.details-button {
+    text-align: right;
+    padding-right: 2vmin;
+    padding-top: 2vmin;
+}
+.details-button button {
+    padding: 1vmin 2vmin;
+    background-color: #cccccc00;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.5vmin;
+}
+.details-button button:hover {
+    padding: 1vmin 2vmin;
+    background-color: #ff0c81;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 16px 2px 115px -43px rgba(77, 74, 74, 0.75) inset;
+    -webkit-box-shadow: 16px 2px 115px -43px rgba(77, 74, 74, 0.75) inset;
+    -moz-box-shadow: 16px 2px 115px -43px rgba(77, 74, 74, 0.75) inset;
+
+    cursor: pointer;
+}
+.image-container-banner {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+      /* This centers children vertically */
+     
+}
+
+.images {
+    display: flex;
+    animation: moveImages 80s linear infinite;
+}
+
+.image-box {
+    flex: 1; 
+    max-width: 8.33%; 
+    margin-left: 66vmin;
+    margin-right: 15vmin;
+}
+.text-overlay {
+    width: 41vmax;
+    position: absolute; /* This will allow the text to overlay the images */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This ensures true centering */
+    text-align: center; 
+}
+
+.text-item {
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+    display: none;
+    /* Other styles for the text appearance */
+    color: white;
+    font-size: 7vmin;
+    background-color:#d9217a98; /* A semi-transparent black background for better readability */
+    padding: 2vmin 2vmin;
+    border-radius: 1vmin;
+
+}
+.text-item:hover {
+    background-color:#d9217a98;
+    box-shadow: 10px -2px 106px 18px rgba(153,11,80,0.47);
+    -webkit-box-shadow: 10px -2px 106px 18px rgba(153,11,80,0.47);
+    -moz-box-shadow: 10px -2px 106px 18px rgba(153,11,80,0.47);
+}
+.sub-paragraph-banner{
+    font-size: 1vmax;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.text-item button{
+    padding: 1vmin 2vmin;
+    background-color: #cccccc00;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.5vmin;
+
+}
+.text-item button:hover{
+    padding: 1vmin 2vmin;
+    background-color: #ff0c81;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 16px 2px 115px -43px rgba(77, 74, 74, 0.75) inset;
+    -webkit-box-shadow: 16px 2px 115px -43px rgba(77, 74, 74, 0.75) inset;
+    -moz-box-shadow: 16px 2px 115px -43px rgba(77, 74, 74, 0.75) inset;
+
+    cursor: pointer;
+
+}
+.footer-menu{
+    margin-top: -2vmin;
+    padding-top: 5vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    justify-items: center;
+    background-color: rgba(21,60,73,1)!important;
+    color: white;
+}
+.footer-sub-menu img{
+    width: 14vmax;
+}
+.footer-sub-menu{
+    text-align: left;
+}
+.footer-paragraph{
+    color: white;
+}
+.footer-sub-menu-heading {
+    font-size: 4vmin;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.footer-sub-menu ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 0.5vmin;
+}
+.footer-sub-menu ul li:hover{
+   color: #d92179;
+}
+.address-paragraph{
+    font-size: smaller;
+    width: 15vmax;
+}
+#logo_footer_div {
+    background-color: white;
+    border-radius: 1vmin;
+    padding: 2vmin;
+}
+
+@keyframes moveImages {
+    0% {
+        transform: translateX(-30%);
+    }
+    50% {
+        transform: translateX(-550%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+  
+    100% {
+        transform: translateX(100%);
+    }
+}
+@media (min-width: 769px) {
+    .navbar_menu {
+        display: flex !important; /* Use !important to override inline styles */
+    }
+}
+@media (max-width: 768px) {
+    .image-container img {
+        width: 71vmin;
+    }
+    .navbar_default_sub img {
+        width: 34vmin;
+    }
+    .navbar_menu ul li {
+        padding: 1vmin 1vmin;
+        font-size: 5vmin;
+    }
+    #hamburger {
+        display: block;
+    }
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 120%;
+        /* This gives it a 16:9 aspect ratio */
+    }
+    video {
+        width: 271%;
+    }
+
+    .navbar_menu {
+        display: none; /* Initially hide the menu on smaller screens */
+        flex-direction: column;
+        position: absolute;
+         top: 21vmin; /* Adjust depending on your navbar's height */
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+    .navbar_menu ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    /* When the menu is active */
+    .navbar_menu.active {
+        display: block;
+    }
+    .overlay-text {
+        font-size: 9vmin;
+    }
+
+    .overlay-button {
+        font-size: 3vmin;
+        top: 45%;
+    }
+    .events-container input {
+        padding: 3vmin 12vmin;
+    }
+    .image-box {
+        flex: 1; 
+        max-width: 8.33%; 
+        margin-left: 60vmin;
+        margin-right: 50vmin;
+    }
+    .sub-paragraph-banner{
+        font-size: 2vmax;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .text-item {
+    
+        font-size: 10vmin;
+      
+    }
+    #basket-icon-nav{
+        display: none;
+    }
+    .information-container {
+        width: 70vmin;
+    }
+    .details-container p {
+       
+        font-size: 6.5vmin;
+      
+    }
+    .details-container ul li {
+        
+        font-size: 3.5vmin;
+    
+    }.details-container ul li svg {
+        width: 4vmin;
+      
+      
+    }
+    .address-paragraph {
+        font-size: smaller;
+        width: 29vmax;
+    }
+    .footer-sub-menu-heading {
+        font-size: 10vmin;
+        
+    }
+    .footer-sub-menu img {
+        width: 28vmax;
+    }
+   
+}
