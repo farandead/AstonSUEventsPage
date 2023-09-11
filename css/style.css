@@ -72,6 +72,8 @@ body {
     padding-left: 3vmin;
 }
 .navbar_default_sub_list button{
+    margin-top: -2vmin;
+    margin-left: 2vmin;
     padding: 1vmin 4vmin;
     background-color: #d92179;
     color: white;
@@ -446,6 +448,10 @@ input[type="search"] {
     font-family: 'Bebas Neue', sans-serif;
 }
 .footer-sub-menu ul li{
+    display: flex;
+    align-content: center;
+    align-items: center;
+   
     list-style: none;
     cursor: pointer;
     padding: 0.5vmin;
