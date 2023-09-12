@@ -1,0 +1,60 @@
+
+body {
+ 
+  overflow-x: hidden;
+}
+
+.ocean { 
+  height: 5%;
+  width:60%;
+  position:absolute;
+  
+  background: #10101000;
+
+  top: 0; 
+  left: 0;
+  right: 0; 
+  /* Give it a specific height or use a percentage depending on your design */
+  height: 100px; 
+  z-index: 1; 
+}
+
+.wave {
+  background: url(/img/wave.svg) repeat-x; 
+  position: absolute;
+  top: -60px;
+  width: 6400px;
+  height: 66px;
+  animation: wave 18s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -74px;
+  animation: wave 12s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+.share-container{
+    position: relative;
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-0px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
