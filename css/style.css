@@ -664,8 +664,8 @@ input[type="search"] {
     }
     .heading-paragraphs-events P {
         font-size: 11vmin;
-      
-        height: 16vmin;
+        overflow: visible;
+        height: 19vmin;
       
     }
     .footer-menu {
