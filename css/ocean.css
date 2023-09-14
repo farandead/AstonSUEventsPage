@@ -20,7 +20,7 @@ body {
 }
 
 .wave {
-  background: url(/img/wave.svg) repeat-x; 
+  background: url(/astonsu.io/img/wave.svg) repeat-x; 
   position: absolute;
   top: -60px;
   width: 6400px;
