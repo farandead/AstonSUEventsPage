@@ -20,9 +20,9 @@ body {
     justify-content: space-evenly;
     justify-items: center;
     position: sticky;
-    top: 0; /* This ensures the navbar sticks to the top */
-    z-index: 1000; /* This ensures the navbar appears above other content */
-    background-color: white; /* Or any other color you'd prefer */
+    top: 0; 
+    z-index: 1000;
+    background-color: white; 
     padding-bottom: 1vmin;
     padding-top: 1vmin;
 }
@@ -67,8 +67,8 @@ body {
     FONT-WEIGHT: BOLD;
 }
 #basket-icon-nav{
-    position: relative; /* Makes sure the child elements are positioned relative to this */
-    display: inline-block; /* Makes sure the li doesn't take up the full width */
+    position: relative; 
+    display: inline-block;
     padding-left: 3vmin;
 }
 .navbar_default_sub_list button{
@@ -109,8 +109,8 @@ body {
 video {
     width: 100%; /* Ensure video takes full width of the container */
     height: 100%; /* Maintain the video aspect ratio */
-    display: block; /* Remove potential default margins */
-    z-index: 0; /* Keep the video below the overlay text */
+    display: block; 
+    z-index: 0; 
     filter: brightness(60%);
 }
 
